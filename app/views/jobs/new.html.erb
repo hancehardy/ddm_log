@@ -1,0 +1,28 @@
+<h1>New Job</h1>
+
+<%= form_for :job, url: jobs_path do |f| %>
+    <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+     </p>
+
+    <p>
+        <%= f.label :contract_amount %><br>
+        <%= f.text_field :contract_amount %>
+    </p>
+
+    <p>
+        <%= f.label :contract_date %><br>
+        <%= f.text_field :contract_date %>
+    </p>
+
+    <p>
+        <%= f.label :status %><br>
+        <%= f.text_field :status %>
+    </p>
+
+    <p>
+        <%= f.submit %>
+    </p>
+
+<% end %>
