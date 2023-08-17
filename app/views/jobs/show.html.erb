@@ -3,7 +3,7 @@
 </h1>
 
 <p class="contract_amount">
-    <%= @job.contract_amount %>
+    <%= number_to_currency(@job.contract_amount, :precision => 2) %>
 </p>
 
 <p class="contract_date">
@@ -13,3 +13,11 @@
 <p class="Status">
     <%= @job.status %>
 </p>
+
+<p>
+    <%= link_to 'Edit', edit_job_path(@job) %> |
+    <%= link_to "Delete", @job, class: 'btn btn-danger',data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+    
+</p>
+
+
